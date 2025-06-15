@@ -1,12 +1,11 @@
-<%- include('../partials/header') %>
-
+<%- include('../partials/_header') %>
 <h2>Lista de Livros</h2>
-<a href="/livros/novo" class="btn">➕ Novo Livro</a>
+
+<a href="/livros/novo" class="btn">Novo Livro</a>
 
 <table>
   <thead>
     <tr>
-      <th>ID</th>
       <th>Título</th>
       <th>Autor</th>
       <th>Ano</th>
@@ -16,19 +15,18 @@
   <tbody>
     <% livros.forEach(livro => { %>
       <tr>
-        <td><%= livro.id %></td>
         <td><%= livro.titulo %></td>
         <td><%= livro.autor %></td>
         <td><%= livro.ano %></td>
         <td>
-          <a href="/livros/editar/<%= livro.id %>">✏️ Editar</a>
+          <a href="/livros/editar/<%= livro.id %>" class="btn">Editar</a>
           <form action="/livros/deletar/<%= livro.id %>" method="POST" style="display:inline;">
-            <button type="submit" onclick="return confirm('Deseja mesmo excluir?')">🗑️ Excluir</button>
+            <button type="submit" class="danger">Deletar</button>
+
           </form>
         </td>
       </tr>
     <% }) %>
   </tbody>
 </table>
-
-<%- include('../partials/footer') %>
+<%- include('../partials/_footer') %>
