@@ -1,5 +1,4 @@
-<%- include('../partials/header') %>
-
+<%- include('../partials/_header') %>
 <h2><%= livro.id ? 'Editar Livro' : 'Novo Livro' %></h2>
 
 <form action="<%= acao %>" method="POST">
@@ -12,8 +11,8 @@
   <label for="ano">Ano:</label>
   <input type="number" id="ano" name="ano" value="<%= livro.ano || '' %>" required>
 
-  <button type="submit">💾 Salvar</button>
-  <a href="/livros">Cancelar</a>
+  <button type="submit">Salvar</button>
 </form>
 
-<%- include('../partials/footer') %>
+<a href="/livros" class="btn">Voltar</a>
+<%- include('../partials/_footer') %>
