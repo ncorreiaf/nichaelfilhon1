@@ -63,9 +63,3 @@ router.post('/deletar/:id', async (req, res) => {
 });
 
 module.exports = router;
-req.session.message = 'Livro criado com sucesso!';
-req.session.message = 'Livro atualizado com sucesso!';
-req.session.message = 'Livro deletado com sucesso!';
-req.session.message = 'Erro ao criar livro';
-req.session.message = 'Erro ao atualizar livro';
-req.session.message = 'Erro ao deletar livro';
